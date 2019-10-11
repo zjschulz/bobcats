@@ -2,7 +2,7 @@ _to load our classes into a console to test out, run `ruby run.rb` in the termin
 
 ### Music Library Application
 
-Classes
+#### Classes
 
 Song
 * Song has a name
@@ -20,7 +20,7 @@ Genre
 * Genre has a name
 * has a class method .all that returns all the Artists
 
-Associations
+#### Associations
 
 * Song belongs to an Artist
 * Artist has many Songs
