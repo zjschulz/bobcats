@@ -24,6 +24,5 @@ Genre
 
 * Song belongs to an Artist
 * Artist has many Songs
-
 * Song belongs to a Genre
 * Genre has many Songs
