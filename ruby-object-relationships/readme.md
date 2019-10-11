@@ -5,7 +5,7 @@ Music Library Application
 Classes
 
 * Song
-# Song has a name
+** Song has a name
 # has an initializer that takes in a name
 # has a class method .all that returns all the Songs
 # has an instance method #artist that returns the associated Artist
