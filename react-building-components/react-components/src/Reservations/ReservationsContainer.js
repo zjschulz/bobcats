@@ -7,24 +7,20 @@ export default class ReservationsContainer extends React.Component {
     constructor(props){
         super()
         this.state = {
-            site:{}
 
             };
         }
 
 
-    handleSubmit = (event) => {
-        event.preventDefault();
-        let formData = {site: {site: this.state.site, name: this.state.name, date: this.site.date}} 
-        this.setState({site: {...formData.site}})
-        alert('A new site was submitted') 
+    createNewReservation = (formData) => {
+        this.setState({newSite: {...formData}})
     }
     
     render() {
         return (
-            <div id="reservations">
-                <NewReservationForm submit={this.handleSubmit} />
-                <Reservations site={this.state.site} />
+            <div className= "resCont">
+                <NewReservationForm submit={this.createNewReservation} />
+                <Reservations newSite={{...this.state.newSite}} />
             </div>
         )
         }

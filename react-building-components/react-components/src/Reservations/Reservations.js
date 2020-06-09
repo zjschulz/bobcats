@@ -1,33 +1,32 @@
 import React from 'react';
 import Reservation from './Reservation.js'
 
-const testData = [
-    {site: "test",
-    date: "27/05/2020",
-    name: "test site"},
-    {        site: "test",
-    date: "27/05/2020",
-    name: "test site"},
-    {site: "test",
-    date: "27/05/2020",
-    name: "test site"} 
-]
-
 
 export default class Reservations extends React.Component {
     constructor(props){
         super()
-        
+        this.state = {
+            sites: [
+                {site: "test",
+                date: "27/05/2020",
+                name: "test site"},
+                {        site: "test",
+                date: "27/05/2020",
+                name: "test site"},
+                {site: "test",
+                date: "27/05/2020",
+                name: "test site"} 
+            ]
+        }
     }
 
 
     updateSites = () => {
-        testData.push(this.props.site)
+        this.state.sites.push({...this.props.newSite})
     }
 
     generateReservations = () => {
-        // map over your movieData array and return an array of the correct JSX
-        return testData.map((reservation, index) => <Reservation
+        return this.state.sites.map((reservation, index) => <Reservation
           key = {index}
           site = {reservation.site}
           name = {reservation.name}
@@ -35,14 +34,22 @@ export default class Reservations extends React.Component {
           />)
     
         };
-    render() {
+
+    render() {    
         return (
             <div id="reservations">
-            {this.updateSites}
-            {this.generateReservations()}
+            {this.updateSites()}
+            <table className="w3-table-all w3-centered">
+                <tr>
+                    <th>Site</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                </tr>
+                <tbody>
+                    {this.generateReservations()}
+                </tbody>
+            </table>
             </div>
         )
         }
-
-   
-}
+    }

@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+.resCont{
+  text-align: center;
+  display: flex;
+}
+
+#reservations{
+  padding-left: 150px;
+  width: 750px;
+  padding-top: 50px;
+}
+
+.welcome{
+  background-color: brown;
+  padding: 20px;
+  text-align: center;
+  border: darkgoldenrod solid;
+}
+
+.reservationForm{
+  padding-top: 30px;
+  padding-left: 40px;
+}
+
+h1{color: blanchedalmond;
+font-weight: 250;}
+
+label{
+  color: darkslategrey;
+}
+
+.container{
+  Width:400px;
+  
+}
