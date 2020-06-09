@@ -15,7 +15,15 @@ const testData = [
 
 
 export default class Reservations extends React.Component {
+    constructor(props){
+        super()
+        
+    }
 
+
+    updateSites = () => {
+        testData.push(this.props.site)
+    }
 
     generateReservations = () => {
         // map over your movieData array and return an array of the correct JSX
@@ -30,6 +38,7 @@ export default class Reservations extends React.Component {
     render() {
         return (
             <div id="reservations">
+            {this.updateSites}
             {this.generateReservations()}
             </div>
         )
