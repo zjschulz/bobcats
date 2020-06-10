@@ -1,21 +1,16 @@
 import React from 'react';
 
 
-export default class Reservation extends React.Component {
-    render(){
+const Reservation = (props) => {
+
         return(
-            
-            
             <tr>
-                <td>{this.props.site}</td> 
-                <td>{this.props.name}</td>
-                <td>{this.props.date}</td>
+                <td>{props.site}</td> 
+                <td>{props.name}</td>
+                <td>{props.date}</td>
             </tr>
-
-
         )
-    }
-   
 
-   
 }
+
+export default Reservation

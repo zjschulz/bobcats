@@ -1,14 +1,10 @@
 import React from 'react';
 
+const WelcomeComponent = () => {
+    return(
 
-export default class WelcomeComponent extends React.Component {
-
-    render(){
-        return(
-
-            <div className="welcome"><h1><b>Flatiron Reservations App</b></h1></div>
-        )
-            
-
-    }
+        <div className="welcome"><h1><b>Flatiron Reservations App</b></h1></div>
+    )
 }
+
+export default WelcomeComponent
